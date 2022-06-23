@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/common/lockable-card/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": []
+}

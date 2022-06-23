@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/data-access/store/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": ["data-access", "store"]
+}

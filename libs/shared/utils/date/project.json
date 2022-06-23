@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/utils/date/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": []
+}

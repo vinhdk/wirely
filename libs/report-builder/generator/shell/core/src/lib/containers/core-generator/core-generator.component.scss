@@ -1,0 +1,31 @@
+.wrapper__view__generator {
+  @apply px-10 py-5;
+  &__stepper {
+    @apply mb-4;
+  }
+
+  &__content {
+    @apply mb-10;
+  }
+
+  &__movement {
+    @apply flex justify-start items-center gap-3;
+  }
+
+  .wrapper__tui__step {
+    margin: 0;
+    color: var(--tui-link);
+
+    &:hover {
+      color: var(--tui-link-hover);
+    }
+  }
+
+  .wrapper__tui__separator {
+    height: 100%;
+    color: var(--tui-base-03);
+    margin: 0 0.75rem;
+  }
+}
+
+

@@ -1,0 +1,13 @@
+<form #form="ngForm" class="wrapper__step-report-name">
+  <tui-input
+    [wrExistedReportName]="listNames"
+    tuiTextfieldSize="m"
+    [(ngModel)]="reportName"
+    name="reportName"
+  >
+    Report Name
+    <span *ngIf="ngForm.form.get('reportName')?.hasError('duplicate_report_name')"
+          class="text-red-500 font-bold"> - Report name already exists</span>
+    <input tuiTextfield type="text"/>
+  </tui-input>
+</form>

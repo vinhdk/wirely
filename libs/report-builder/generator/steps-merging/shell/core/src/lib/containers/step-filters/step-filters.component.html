@@ -1,0 +1,13 @@
+<form [formGroup]="form" class="wrapper__step-filters">
+  <section *ngrxLet="filters$; let filters" class="wrapper__step-filters__items">
+    <ng-container *ngFor="let item of filters; index as idx">
+      <div class="wrapper__step-filters__item">
+        <tui-multi-select  [formControlName]="item.categoryName | textReplace" [editable]="false" [(search)]="search" tuiTextfieldSize="m"
+        [expandable]="false">
+          {{ item.categoryName }}
+        <tui-data-list-wrapper *tuiDataList tuiMultiSelectGroup [items]="filter(search, idx, filters)"></tui-data-list-wrapper>
+        </tui-multi-select>
+      </div>
+    </ng-container>
+  </section>
+</form>

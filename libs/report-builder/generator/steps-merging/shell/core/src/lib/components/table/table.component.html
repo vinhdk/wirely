@@ -1,0 +1,21 @@
+<div class="wrapper__steps-merging__table">
+  <ng-container *ngIf="vm$ | async as vm">
+    <table>
+      <thead>
+        <th>
+        </th>
+        <th *ngFor="let col of vm.displayedColumns">{{col | displayName}}</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of vm.filterRows">
+          <td>
+            <input type="checkbox" class="wrapper__steps-merging__table__checkbox">
+          </td>
+          <td *ngFor="let col of vm.displayedColumns">
+            <span>{{row[col]}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>

@@ -1,0 +1,12 @@
+.wrapper__steps-merging {
+  @apply flex flex-row gap-4 mr-4 w-full h-screen p-4;
+  &__container {
+    @apply h-full overflow-auto w-2/5 flex flex-col justify-between gap-3 border border-solid rounded-t rounded-b p-4;
+  }
+  &__report {
+    @apply h-full overflow-auto w-3/5 flex flex-col justify-between items-center gap-4;
+    & wr-step-overview {
+      @apply flex-1 w-full;
+    }
+  }
+}

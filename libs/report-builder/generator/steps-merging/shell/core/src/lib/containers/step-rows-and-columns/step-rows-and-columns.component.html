@@ -1,0 +1,55 @@
+<span class="wrapper__step-rows-and-columns__description">
+  The column below will appear in the report.
+  <br>
+  You can
+  <span class="emphasis">Drag and drop column</span>
+  or
+  <span class="emphasis">
+    <tui-svg src="tuiIconEyeOpen"></tui-svg>
+    show/hide column
+  </span>
+</span>
+<section class="wrapper__step-rows-and-columns__container">
+  <form
+    (cdkDropListDropped)="drop($event)"
+    *ngrxLet="rowItems$; let rowItems"
+    [cdkDropListData]="rowItems"
+    [formGroup]="rowsForm"
+    [id]="'row'"
+    cdkDropList
+    class="wrapper__step-rows"
+  >
+    <div class="wrapper__step-rows__title">
+      Rows
+    </div>
+    <div class="wrapper__step-rows__content">
+      <ng-container *ngFor="let item of rowItems; index as idx">
+        <tui-checkbox-block
+          [cdkDragData]="item"
+          [formControlName]="item"
+          cdkDrag
+          contentAlign="left"
+          size="s"
+        >
+          {{ item | textReplace: 'normal' }}
+        </tui-checkbox-block>
+      </ng-container>
+    </div>
+  </form>
+  <form
+    *ngrxLet="columnItems$; let columnItems"
+    [formGroup]="columnsForm"
+    class="wrapper__step-columns"
+  >
+    <div class="wrapper__step-columns__title">
+      Columns
+    </div>
+    <div class="wrapper__step-columns__content">
+      <ng-container *ngFor="let item of columnItems; index as idx">
+        <tui-radio-block [formControlName]="'columnControl'" [item]="item" contentAlign="left" size="s">
+          {{ item | textReplace: 'normal' }}
+        </tui-radio-block>
+      </ng-container>
+    </div>
+  </form>
+</section>

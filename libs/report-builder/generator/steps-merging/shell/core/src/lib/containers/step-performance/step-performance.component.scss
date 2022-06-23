@@ -1,0 +1,12 @@
+.wrapper__step-performance {
+  &__container {
+    @apply bg-white rounded-t rounded-b relative shadow-sm;
+  }
+  &__items {
+    @apply -mr-5 flex flex-row flex-wrap gap-y-4;
+  }
+  &__item {
+    @apply mr-5;
+    width: calc(50% - 1.25rem);
+  }
+}

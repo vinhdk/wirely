@@ -1,0 +1,99 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@data-access-common": ["libs/shared/data-access/common/src/index.ts"],
+      "@data-access-primitive": [
+        "libs/shared/data-access/primitive/src/index.ts"
+      ],
+      "@data-access-store": ["libs/shared/data-access/store/src/index.ts"],
+      "@report-builder-detail-chart-shared-data-access": [
+        "libs/report-builder/detail/chart/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-detail-chart-shell-core": [
+        "libs/report-builder/detail/chart/shell/core/src/index.ts"
+      ],
+      "@report-builder-detail-shared-data-access": [
+        "libs/report-builder/detail/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-detail-shell-core": [
+        "libs/report-builder/detail/shell/core/src/index.ts"
+      ],
+      "@report-builder-detail-table-shared-data-access": [
+        "libs/report-builder/detail/table/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-detail-table-shell-core": [
+        "libs/report-builder/detail/table/shell/core/src/index.ts"
+      ],
+      "@report-builder-generator-shared-data-access": [
+        "libs/report-builder/generator/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-generator-shared-data-access-service": [
+        "libs/report-builder/generator/steps-merging/shared/data-access/service/src/index.ts"
+      ],
+      "@report-builder-generator-shared-ui-select": [
+        "libs/report-builder/generator/shared/ui/select/src/index.ts"
+      ],
+      "@report-builder-generator-shared-ui-text": [
+        "libs/report-builder/generator/shared/ui/text/src/index.ts"
+      ],
+      "@report-builder-generator-shell-core": [
+        "libs/report-builder/generator/shell/core/src/index.ts"
+      ],
+      "@report-builder-generator-shared-data-access-store": [
+        "libs/report-builder/generator/steps-merging/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-generator-steps-merging-shell-core": [
+        "libs/report-builder/generator/steps-merging/shell/core/src/index.ts"
+      ],
+      "@report-builder-shared-common-lockable-card": [
+        "libs/shared/ui/common/lockable-card/src/index.ts"
+      ],
+      "@report-builder-shared-data-access": [
+        "libs/report-builder/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-shared-data-access-api": [
+        "libs/shared/data-access/api/src/index.ts"
+      ],
+      "@report-builder-shared-utils-date": [
+        "libs/shared/utils/date/src/index.ts"
+      ],
+      "@report-builder-shared-utils-validators": [
+        "libs/shared/utils/interceptors/src/index.ts"
+      ],
+      "@report-builder-shell-core": [
+        "libs/report-builder/shell/core/src/index.ts"
+      ],
+      "@report-builder-view-shared-data-access": [
+        "libs/report-builder/view/shared/data-access/store/src/index.ts"
+      ],
+      "@report-builder-view-shell-core": [
+        "libs/report-builder/view/shell/core/src/index.ts"
+      ],
+      "@resources-assets": ["libs/shared/resources/assets/src/index.ts"],
+      "@resources-environments": [
+        "libs/shared/resources/environments/src/index.ts"
+      ],
+      "@ui-common-chart": ["libs/shared/ui/common/chart/src/index.ts"],
+      "@ui-common-table": ["libs/shared/ui/common/table/src/index.ts"],
+      "@utils-validators": ["libs/shared/utils/validators/src/index.ts"],
+      "@wirely/shared/data-access/model": [
+        "libs/shared/data-access/model/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

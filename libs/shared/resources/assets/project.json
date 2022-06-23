@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/resources/assets/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": ["resources", "assets"]
+}

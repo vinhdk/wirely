@@ -1,0 +1,41 @@
+.wrapper__step-overview {
+  @apply w-full h-full flex flex-col justify-between rounded border border-solid relative shadow-sm;
+  &__title {
+    @apply h-12 pl-4 flex justify-between items-center border-b border-solid;
+    &__controls {
+      @apply h-full flex flex-row;
+      tui-select {
+        @apply m-0 w-60;
+        tui-hosted-dropdown, tui-primitive-textfield {
+          height: 100% !important;
+          min-height: 100% !important;
+        }
+        tui-wrapper {
+          @apply shadow-none rounded-none;
+          &::after {
+            @apply border-y-0;
+          }
+        };
+      }
+
+      button {
+        @apply rounded-none uppercase;
+        height: 100% !important;
+      }
+    }
+  }
+
+  &__table {
+    @apply p-4 flex-1;
+    wr-steps-merging-table {
+      @apply flex h-full;
+    }
+  }
+
+  &__chart {
+    @apply p-4 w-full h-1/2 ;
+    canvas {
+      height: 100% !important;
+    }
+  }
+}

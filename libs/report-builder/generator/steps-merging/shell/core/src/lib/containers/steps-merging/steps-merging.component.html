@@ -1,0 +1,25 @@
+<div class="wrapper__steps-merging">
+  <div class="wrapper__steps-merging__container">
+    <wr-step-report-name></wr-step-report-name>
+    <ng-container *ngFor="let step of STEPS; index as idx; first as isFirst">
+      <ng-container *ngTemplateOutlet="steps; context: { index: idx, step: step}"></ng-container>
+    </ng-container>
+  </div>
+  <div #reportZone class="wrapper__steps-merging__report">
+    <wr-step-overview></wr-step-overview>
+  </div>
+</div>
+
+<ng-template #steps let-index="index" let-step="step">
+  <wr-common-lockable-card (locked)="getLocked(step, index)">
+    <ng-template wrLockableCardTitle>{{ step.name }}</ng-template>
+    <ng-template wrLockableCardBody>
+      <ng-container [ngSwitch]="step.name">
+        <wr-step-filters *ngSwitchCase="'Filters'"></wr-step-filters>
+        <wr-step-metrics *ngSwitchCase="'Metrics'"></wr-step-metrics>
+        <wr-step-rows-and-columns *ngSwitchCase="'Rows and Columns'"></wr-step-rows-and-columns>
+        <wr-step-performance *ngSwitchCase="'Performance'"></wr-step-performance>
+      </ng-container>
+    </ng-template>
+  </wr-common-lockable-card>
+</ng-template>

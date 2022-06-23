@@ -1,0 +1,11 @@
+<section *ngrxLet="filter$; let filter" [formGroup]="form" class="wrapper__step-performance">
+  <div class="wrapper__step-performance__container">
+    <div class="wrapper__step-performance__items">
+        <ng-container *ngFor="let item of filter; index as idx">
+            <tui-radio-block class="wrapper__step-performance__item" [formControlName]="'timePeriod'" [item]="item" contentAlign="left" size="s">
+                {{ item | textReplace: 'normal' }}
+            </tui-radio-block>
+        </ng-container>
+    </div>
+  </div>
+</section>

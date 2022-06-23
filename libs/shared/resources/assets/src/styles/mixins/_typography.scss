@@ -1,0 +1,35 @@
+$textWeights: normal, medium, semibold;
+@mixin ibm($type: 'b', $size: '1', $weight: 'normal', $screen: null) {
+  @if ($screen) {
+    @apply #{$screen}:font-ibm;
+    @apply #{$screen}:text-#{$type}#{$size};
+    @apply #{$screen}:font-#{$weight};
+  } @else {
+    @apply font-ibm;
+    @apply text-#{$type}#{$size};
+    @apply font-#{$weight};
+  }
+}
+
+@mixin ibmGenerate($type: 'b', $size: '1') {
+  .#{type}#{i} {
+
+    @include ibm($type, $size, 'normal');
+
+    @each $tw in $textWeights {
+      &-#{$tw} {
+        @include ibm($type, $size, $tw);
+      }
+    }
+  }
+}
+
+@mixin generate() {
+  @for $i from 1 through 10 {
+    @include ibmGenerate('h', $i);
+  }
+
+  @for $i from 1 through 5 {
+    @include ibmGenerate('b', $i);
+  }
+}

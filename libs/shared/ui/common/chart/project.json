@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/common/chart/src",
+  "prefix": "wr-common-chart",
+  "targets": {},
+  "tags": ["ui", "common", "assets"]
+}

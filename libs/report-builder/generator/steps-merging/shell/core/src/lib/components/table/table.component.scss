@@ -1,0 +1,26 @@
+.wrapper__steps-merging__table {
+  @apply overflow-auto;
+  table {
+    @apply border-collapse;
+    thead {
+      @apply bg-slate-50;
+      th {
+        @apply px-3 py-2 border border-solid whitespace-nowrap;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          @apply p-2 border border-solid whitespace-nowrap overflow-hidden overflow-ellipsis;
+        }
+      }
+    }
+
+  }
+
+  &__checkbox {
+    @apply m-0;
+  }
+
+}

@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/utils/validators/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": ["utils", "assets"]
+}

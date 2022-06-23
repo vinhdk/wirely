@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/report-builder/generator/shared/ui/text/src",
+  "prefix": "wr-report-builder-generator-text",
+  "targets": {},
+  "tags": ["report-builder", "generator", "ui", "text"]
+}

@@ -1,0 +1,134 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/report-builder/src",
+  "prefix": "wr",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/report-builder",
+        "index": "apps/report-builder/src/index.html",
+        "main": "apps/report-builder/src/main.ts",
+        "polyfills": "apps/report-builder/src/polyfills.ts",
+        "tsConfig": "apps/report-builder/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "input": "libs/shared/resources/assets/src/icons",
+            "glob": "**/*",
+            "output": "./wr-assets/icons"
+          },
+          {
+            "input": "libs/shared/resources/assets/src/fonts",
+            "glob": "**/*",
+            "output": "./wr-assets/fonts"
+          },
+          {
+            "input": "libs/shared/resources/assets/src/images",
+            "glob": "**/*",
+            "output": "./wr-assets/images"
+          },
+          {
+            "input": "libs/shared/resources/assets/src/styles",
+            "glob": "**/*",
+            "output": "./wr-assets/styles"
+          },
+          {
+            "input": "libs/shared/resources/assets/src/svgs",
+            "glob": "**/*",
+            "output": "./wr-assets/svgs"
+          },
+          {
+            "input": "libs/shared/resources/assets/src/jsons",
+            "glob": "**/*",
+            "output": "./wr-assets/jsons"
+          }
+        ],
+        "styles": [
+          "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+          "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",
+          "apps/report-builder/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/report-builder/src/environments/environment.ts",
+              "with": "apps/report-builder/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "report-builder:build:production"
+        },
+        "development": {
+          "browserTarget": "report-builder:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "report-builder:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/report-builder/**/*.ts",
+          "apps/report-builder/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/report-builder"
+      ],
+      "options": {
+        "jestConfig": "apps/report-builder/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": [
+    "report-builder"
+  ]
+}

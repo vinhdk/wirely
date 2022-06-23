@@ -1,0 +1,39 @@
+.wrapper__lockable-card {
+  @apply flex flex-col rounded border border-solid relative shadow-sm;
+
+  &__title {
+    @apply px-4 py-2 border-b border-solid flex justify-between items-center;
+
+    &__text {
+      @apply text-base capitalize;
+    }
+
+    &__locker {
+      & tui-svg {
+        @apply text-xs cursor-pointer;
+
+        &.tuiIconLockOpenLarge {
+          @apply text-green-500;
+        }
+
+        &.tuiIconLockLarge {
+          @apply text-red-500;
+        }
+
+        &:hover {
+          @apply rounded-3xl bg-slate-50;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @apply px-4 py-4 relative;
+
+    &.locked {
+      &::before {
+        @apply content-[''] select-none cursor-not-allowed w-full h-full absolute top-0 left-0 z-10 bg-white opacity-60;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/utils/interceptors/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": []
+}

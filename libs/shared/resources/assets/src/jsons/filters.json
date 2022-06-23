@@ -1,0 +1,47 @@
+[
+  {
+    "categoryName": "Date Type",
+    "options": ["Default Date Period", "Current Day", "Yesterday", "Week To Date", "Last Week To Date", "Month To Date", "Last Month To Date"],
+    "type": "select"
+  },
+  {
+    "categoryName": "Category",
+    "options": ["Beverage", "Food", "Misc"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Department",
+    "options": ["118 - ADD ONS", "101 - SHARES", "110 - MAINS"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Department Code",
+    "options": ["1", "111", "118"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Location",
+    "options": ["45 - FRONT YARD", "50 - FRONT YARD"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Sales Cat",
+    "options": ["1 - FOOD", "2 - BEVERAGE"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Staff Member",
+    "options": ["LUCIE M", "KATIE SOMTUA", "OSCAR H"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Transaction Type",
+    "options": ["SI", "MAM6", "PSS"],
+    "type": "multiselect"
+  },
+  {
+    "categoryName": "Metrics",
+    "options": ["Sales", "COGS", "GP%", "Quantity"],
+    "type": "multiselect"
+  }
+]

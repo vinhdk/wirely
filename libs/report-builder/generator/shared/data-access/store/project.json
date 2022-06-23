@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/report-builder/generator/shared/data-access/store/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": ["report-builder", "generator", "data-access", "store"]
+}

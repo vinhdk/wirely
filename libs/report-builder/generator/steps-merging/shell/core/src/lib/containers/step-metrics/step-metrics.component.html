@@ -1,0 +1,9 @@
+<form *ngrxLet="options$; let options" [formGroup]="form" class="wrapper__step-metrics">
+  <section class="wrapper__step-metrics__items">
+    <ng-container *ngFor="let option of options">
+      <tui-checkbox-labeled [formControlName]="option">
+        {{option}}
+      </tui-checkbox-labeled>
+    </ng-container>
+  </section>
+</form>

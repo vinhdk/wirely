@@ -1,0 +1,36 @@
+<table class="wrapper-common-table">
+  <thead>
+    <tr>
+      <ng-container *ngFor="let column of columns">
+        <th>
+          <ng-container *ngIf="headerMap[column] as headerTemplate; else defaultHeader">
+            <ng-container *ngTemplateOutlet="headerTemplate; context: {column: column}"></ng-container>
+          </ng-container>
+          <ng-template #defaultHeader>
+            <ng-container *ngIf="column.config as config">
+              <span>{{config.title}}</span>
+            </ng-container>
+          </ng-template>
+        </th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let row of rows">
+      <tr>
+        <ng-container *ngFor="let column of columns">
+          <td>
+            <ng-container *ngIf="bodyMap[column] as bodyTemplate; else defaultBody">
+              <ng-container *ngTemplateOutlet="bodyTemplate; context: {column: column, row: row, data: row[column]}"></ng-container>
+            </ng-container>
+            <ng-template #defaultBody>
+              <ng-container *ngIf="column.config as config">
+                <span>{{config.text}}</span>
+              </ng-container>
+            </ng-template>
+          </td>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

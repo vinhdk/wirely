@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/report-builder/view/shell/core/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": ["report-builder", "view", "shell", "core"]
+}

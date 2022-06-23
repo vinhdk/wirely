@@ -1,0 +1,14 @@
+<div class="wrapper__lockable-card">
+  <div class="wrapper__lockable-card__title">
+    <div class="wrapper__lockable-card__title__text">
+      <ng-container *ngIf="cardTitle">
+        <ng-template *ngTemplateOutlet="cardTitle.templateRef"></ng-template>
+      </ng-container>
+    </div>
+  </div>
+  <div class="wrapper__lockable-card__body">
+    <ng-container *ngIf="cardBody">
+      <ng-template *ngTemplateOutlet="cardBody.templateRef; context: { status: isLocked }"></ng-template>
+    </ng-container>
+  </div>
+</div>

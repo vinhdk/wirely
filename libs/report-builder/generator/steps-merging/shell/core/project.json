@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/report-builder/generator/steps-merging/shell/core/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": []
+}

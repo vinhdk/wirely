@@ -1,0 +1,10 @@
+.wrapper__step-filters {
+  @apply -mr-5;
+  &__items {
+    @apply flex flex-row flex-wrap justify-between gap-y-4;
+  }
+  &__item {
+    @apply mr-5;
+    width: calc(50% - 1.25rem);
+  }
+}

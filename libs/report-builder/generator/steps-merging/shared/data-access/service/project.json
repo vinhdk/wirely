@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/report-builder/generator/steps-merging/shared/data-access/service/src",
+  "prefix": "wr",
+  "targets": {},
+  "tags": []
+}
